@@ -1,5 +1,5 @@
 <template>
-  <div class="v-selector" @click="selected($event)">
+  <div tabindex="1" class="v-selector" @click="selected($event)">
     <div class="v-selector__img">
       <img
         src="@/assets/images/tongue.png"
@@ -54,11 +54,13 @@ export default {
     transition: all;
   }
 
-  &:hover &__option_ua {
+  &:hover &__option_ua,
+  &:active &__option_ua {
     animation: ani 1.5s forwards;
   }
 
-  &:hover &__option_en {
+  &:hover &__option_en,
+  &:active &__option_en {
     animation: ani 2.5s forwards;
     animation-delay: 0.5s;
   }

@@ -26,11 +26,10 @@ export default {
 
 <style lang="less">
 .v-header {
-  border: 1px solid green;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 284px;
+  padding-top: 28px;
 }
 
 @media screen and (max-width: 680px) {

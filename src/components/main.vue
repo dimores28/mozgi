@@ -15,6 +15,18 @@
       >
       </v-link>
     </section>
+    <section class="showreel">
+      <div class="text-ellipse">
+        <img
+          src="@/assets/images/showreel.png"
+          alt="showreel"
+          width="115"
+          height="113"
+          class="text-ellipse__img"
+        />
+        <span class="text-ellipse__dot"></span>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -31,11 +43,6 @@ export default {
 </script>
 
 <style lang="less">
-.v-main {
-  border: 1px solid red;
-  margin-bottom: 300px;
-}
-
 .about-us {
   display: flex;
   align-items: center;
@@ -49,6 +56,44 @@ export default {
   &__link_dn {
     transform: rotate(90deg);
     margin-right: -36px;
+  }
+}
+
+.showreel {
+  text-align: right;
+}
+
+.text-ellipse {
+  margin-right: 30%;
+  display: inline-block;
+  position: relative;
+
+  :hover {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &__dot {
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
