@@ -9,8 +9,8 @@ body{
 	color: var(--primary-text-color);
 	background: var(--main-color);
 	background-image:  url("../images/Ellipse.png"), url("../images/background_text.png");  
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat ;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat ;
 }
 
 h1,h2,h3,.h1,.h2,.h3{
@@ -98,9 +98,20 @@ h1,h2,h3,.h1,.h2,.h3{
 }
 
 // .posr{
-//   position: relative;
-// }
+  @media screen and (max-width: 1024px) {
+    body {
+      background-size: 55%, cover;
+    }
+  }
 
-// .page {
-//     position: fixed;
-// }
+  @media screen and (max-width: 768px) {
+    body {
+      background-size: 70%, cover;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    body {
+      background-size: 85%, cover;
+    }
+  }

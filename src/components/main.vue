@@ -47,6 +47,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 58px;
 
   &__link_up {
     transform: rotate(-90deg);
@@ -97,11 +98,45 @@ export default {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .v-main {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+   .v-main {
+    margin-top: 100px;
+  }
+
+  .about-us {
+    margin-bottom: 25px;
+  }
+
+  .text-ellipse {
+    margin-right: 20%;
+  }
+}
+
 @media screen and (max-width: 680px) {
   .about-us {
     &__link {
       display: none;
     }
+  }
+
+  .text-ellipse img{
+    width: 88px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .v-main {
+    margin-top: 40px;
+  }
+
+  .about-us {
+    margin-bottom: 25px;
   }
 }
 </style>

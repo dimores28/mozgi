@@ -1,6 +1,8 @@
 <template>
   <footer class="v-footer">
-    <v-link title="Who?" :link="{ name: 'test' }"> </v-link>
+    <div class="v-footer__link">
+      <v-link title="Who?" :link="{ name: 'test' }"> </v-link>
+    </div>
   </footer>
 </template>
 
@@ -18,5 +20,13 @@ export default {
 .v-footer {
   text-align: center;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 680px) {
+  .v-footer {
+    &__link {
+      display: none;
+    }
+  }
 }
 </style>
