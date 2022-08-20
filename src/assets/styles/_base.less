@@ -1,6 +1,7 @@
 :root {
 	--primary-text-color: #373737;
 	--main-color: #E5E5E5;
+  --hover-color: #fff;
 }
 
 body{
@@ -8,8 +9,8 @@ body{
 	color: var(--primary-text-color);
 	background: var(--main-color);
 	background-image:  url("../images/Ellipse.png"), url("../images/background_text.png");  
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat ;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat ;
 }
 
 h1,h2,h3,.h1,.h2,.h3{
@@ -24,7 +25,7 @@ h1,h2,h3,.h1,.h2,.h3{
 
 .container{
 	max-width: 1440px;
-	padding: 30px;
+  padding: 0 30px;
 	margin: 0 auto;
 }
 
@@ -39,3 +40,78 @@ h1,h2,h3,.h1,.h2,.h3{
 	box-sizing: border-box;
 }
 
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+	transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-active {
+	padding-left: 10px;
+	opacity: 0;
+}
+
+.slide-left-enter-active {
+  animation: fadeInLeft 1s;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+.slide-left-leave-active {
+  animation: going 1s;
+}
+
+@keyframes going {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes coming {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// .posr{
+  @media screen and (max-width: 1024px) {
+    body {
+      background-size: 55%, cover;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    body {
+      background-size: 70%, cover;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    body {
+      background-size: 85%, cover;
+    }
+  }
