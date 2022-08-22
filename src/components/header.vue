@@ -3,7 +3,7 @@
     <v-language-selection
       @selectedLang="selected($event)"
     ></v-language-selection>
-    <!-- <v-logo></v-logo> -->
+    <v-logo></v-logo>
     <v-burger-menu></v-burger-menu>
   </header>
 </template>
@@ -11,12 +11,13 @@
 <script>
 import vLanguageSelection from "@/components/ui/v-language-selectior";
 import vBurgerMenu from "@/components/ui/v-burger-menu";
-// import vLogo from "@/components/ui/v-logo";
+import vLogo from "@/components/ui/v-logo";
 export default {
   name: "Header",
   components: {
     vLanguageSelection,
-    vBurgerMenu
+    vBurgerMenu,
+    vLogo
   },
   methods: {
     selected(e) {
@@ -32,6 +33,7 @@ export default {
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 28px;
+  position: relative;
 }
 
 @media screen and (max-width: 680px) {

@@ -8,9 +8,9 @@
         height="21"
       />
     </div>
-    <div>
-      <span class="v-selector__option_ua">UA</span>
-      <span class="v-selector__option_en">EN</span>
+    <div class="v-selector__options">
+      <span class="v-selector__option v-selector__option_ua">UA</span>
+      <span class="v-selector__option v-selector__option_en">EN</span>
     </div>
   </div>
 </template>
@@ -71,6 +71,18 @@ export default {
     }
     100% {
       opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .v-selector {
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__option {
+      display: block;
+      margin: 7px 0 !important;
     }
   }
 }
