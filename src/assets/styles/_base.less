@@ -8,9 +8,11 @@ body{
 	font-family: 'Grtsk Giga', sans-serif;
 	color: var(--primary-text-color);
 	background: var(--main-color);
-	background-image:  url("../images/Ellipse.png"), url("../images/background_text.png");  
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat ;
+	background-image:  url("../images/Ellipse.png");  
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
 h1,h2,h3,.h1,.h2,.h3{
@@ -39,6 +41,23 @@ h1,h2,h3,.h1,.h2,.h3{
 	margin: 15px;
 	box-sizing: border-box;
 }
+
+.bg-animate-img {
+  position: fixed;
+
+  &__dn {
+    top: -862px;
+    left: 1440px;
+    animation: 15s linear topdown infinite;
+  }
+
+  &__up {
+    left: -1440px;
+    top: 100vh;
+    animation: 15s linear upwards infinite;
+  }
+}
+
 
 .slide-fade-enter-active {
     transition: all .3s ease;
@@ -97,21 +116,38 @@ h1,h2,h3,.h1,.h2,.h3{
   }
 }
 
+// animation: 4s linear 1s infinite topdown;
+
+
+@keyframes upwards {
+  100% {
+    top: -862px;
+    left: 1580px;
+  }
+}
+
+@keyframes topdown {
+  100% {
+    left: -1540px;
+    top: 100vh;
+  }
+}
+
 // .posr{
   @media screen and (max-width: 1024px) {
     body {
-      background-size: 55%, cover;
+      background-size: 55%;
     }
   }
 
   @media screen and (max-width: 768px) {
     body {
-      background-size: 70%, cover;
+      background-size: 70%;
     }
   }
 
   @media screen and (max-width: 440px) {
     body {
-      background-size: 85%, cover;
+      background-size: 85%;
     }
   }
